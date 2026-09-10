@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="sr-Latn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="AI Bootcamp Week 2 projekat za pripremu intervjua">
+    <title>Priprema za intervju: Week 2</title>
+    <link rel="icon" type="image/webp" sizes="300x300" href="/sita-favicon.webp">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">AI Bootcamp · Week 2</p>
+        <h1>Priprema za intervju</h1>
+        <p class="hero-copy">Jedan mali projekat, od TypeScript izvora do javnog i proverljivog rezultata.</p>
+        <button id="refresh-data" type="button">Osveži podatke</button>
+      </header>
+
+      <section class="environment-card" aria-labelledby="environment-heading">
+        <div>
+          <p class="section-label">Okruženje</p>
+          <h2 id="environment-heading"><span id="environment-label">učitavanje</span></h2>
+          <p id="environment-message">Čitanje javne konfiguracije sa servera...</p>
+        </div>
+        <p id="service-status" class="status" role="status">Provera servisne konfiguracije...</p>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel" aria-labelledby="items-heading">
+          <p class="section-label">Read-only podaci</p>
+          <h2 id="items-heading">Stavke za pripremu</h2>
+          <p id="items-status" class="status" role="status">Učitavanje stavki...</p>
+          <ul id="preparation-items" class="preparation-list"></ul>
+        </section>
+
+        <section class="panel summary-panel" aria-labelledby="summary-heading">
+          <p class="section-label">Server-side računanje</p>
+          <h2 id="summary-heading">Pregled pripreme</h2>
+          <p id="summary-status" class="status" role="status">Učitavanje pregleda...</p>
+          <dl class="summary-grid">
+            <div><dt>Ukupno</dt><dd id="summary-total">–</dd></div>
+            <div><dt>Završeno</dt><dd id="summary-completed">–</dd></div>
+            <div><dt>Preostalo</dt><dd id="summary-remaining">–</dd></div>
+            <div><dt>Procenat</dt><dd id="summary-percentage">–</dd></div>
+          </dl>
+        </section>
+      </div>
+
+      <footer>
+        Browser dobija samo javne odgovore. Upstash token ostaje na serveru.
+      </footer>
+    </main>
+    <script type="module" src="/assets/main.js"></script>
+  </body>
+</html>

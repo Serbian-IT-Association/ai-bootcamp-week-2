@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "rootDir": "client",
+    "outDir": "dist/assets",
+    "sourceMap": false
+  },
+  "include": ["client/**/*.ts"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "priprema-za-intervju-week-2-starter",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI Bootcamp Week 2 starter sa read-only Upstash tokom i kontrolisanim build, config i deployment zadatkom.",
+  "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "clean": "node scripts/clean.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run typecheck && node --test tests/*.test.ts",
+    "build": "npm run clean && tsc -p tsconfig.build.json && node scripts/copy-static.mjs && node scripts/check-dist.mjs",
+    "start": "npm run build && node --env-file-if-exists=.env scripts/serve.mjs",
+    "smoke": "node scripts/smoke.mjs",
+    "verify:starter": "npm run check && node scripts/check-starter.mjs && node scripts/verify-local.mjs --summary-status=501",
+    "verify:solution": "npm run test && node scripts/check-solution.mjs && npm run build && node scripts/verify-local.mjs --summary-status=200",
+    "verify:local": "npm run verify:starter",
+    "check": "npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.3",
+    "typescript": "6.0.3"
+  }
+}
