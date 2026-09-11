@@ -19,6 +19,7 @@ class InterviewPreparationPage {
   private readonly remainingValue = requireElement('summary-remaining');
   private readonly percentageValue = requireElement('summary-percentage');
   private readonly refreshButton = requireElement('refresh-data', HTMLButtonElement);
+  private readonly lastRefreshed = requireElement('last-refreshed');
 
   start(): void {
     this.refreshButton.addEventListener('click', () => void this.refresh());
@@ -37,6 +38,7 @@ class InterviewPreparationPage {
     ]);
 
     this.refreshButton.disabled = false;
+    this.lastRefreshed.textContent = `Poslednje osveženo u ${new Date().toLocaleTimeString('sr-Latn-RS')}`;
   }
 
   private async loadHealth(): Promise<void> {
