@@ -47,6 +47,38 @@
         </section>
       </div>
 
+      <section class="panel readiness-panel" aria-labelledby="readiness-heading">
+        <p class="section-label">Personal touch</p>
+        <h2 id="readiness-heading">Interview Readiness</h2>
+
+        <div class="readiness-overview">
+          <p id="readiness-level" class="readiness-level" role="status">Učitavanje statusa pripreme...</p>
+          <span id="readiness-percentage" class="readiness-percentage">–</span>
+        </div>
+        <progress id="readiness-progress" class="readiness-progress" max="100">
+          Status pripreme još nije dostupan.
+        </progress>
+
+        <div class="readiness-focus-block">
+          <h3>Sledeći fokus</h3>
+          <p id="readiness-focus">Učitavanje sledeće stavke...</p>
+        </div>
+
+        <div class="readiness-note-block">
+          <label for="readiness-note">Moj fokus za sledeći intervju</label>
+          <textarea
+            id="readiness-note"
+            name="readiness-note"
+            rows="3"
+            maxlength="280"
+            placeholder="Zapiši jednu kratku nameru ili podsetnik."
+          ></textarea>
+          <p id="readiness-note-status" class="readiness-note-hint" role="status">
+            Beleška se čuva samo u ovom browseru i ne šalje se serveru.
+          </p>
+        </div>
+      </section>
+
       <footer>
         Browser dobija samo javne odgovore. Upstash token ostaje na serveru.
       </footer>
