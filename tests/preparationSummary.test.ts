@@ -6,7 +6,7 @@ test('createPreparationSummary calculates the seed result', () => {
   const items = [
     { id: 1, title: '1', completed: true },
     { id: 2, title: '2', completed: true },
-    { id: 3, title: '3', completed: false },
+    { id: 3, title: '3', completed: true },
     { id: 4, title: '4', completed: false },
     { id: 5, title: '5', completed: true },
     { id: 6, title: '6', completed: false },
