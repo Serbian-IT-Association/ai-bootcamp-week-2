@@ -42,7 +42,7 @@ export async function getPreparationItems(): Promise<PreparationItem[]> {
 }
 
 export async function getPreparationSummary(): Promise<PreparationSummary> {
-  const envelope = await getJson<ApiEnvelope<PreparationSummary>>('/api/preparation-summaries');
+  const envelope = await getJson<ApiEnvelope<PreparationSummary>>('/api/preparation-summary');
   return envelope.data;
 }
 
