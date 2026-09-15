@@ -58,6 +58,8 @@ button {
 button:disabled { cursor: wait; opacity: 0.65; }
 button:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
 
+.last-refreshed { margin: 0.6rem 0 0; color: #d5eee2; font-size: 0.82rem; }
+
 .environment-card, .panel {
   border: 1px solid rgba(25, 80, 60, 0.15);
   background: rgba(255, 255, 255, 0.92);
