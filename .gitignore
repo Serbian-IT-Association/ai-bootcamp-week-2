@@ -1,3 +1,13 @@
 .vercel/
 *.log
 .DS_Store
+# Dependencies
+node_modules/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# Generated build output
+dist/
